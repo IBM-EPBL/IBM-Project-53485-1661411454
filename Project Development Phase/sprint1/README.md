@@ -4,4 +4,4 @@
 ## Project Development Phase
 ### Sprint 1 (Register)
     
-    This folder contains the register page for the project.The page is created using php, html, css and sql.
+    This folder contains the coding part of  register page for the project.The page is created using php, html, css and sql.
