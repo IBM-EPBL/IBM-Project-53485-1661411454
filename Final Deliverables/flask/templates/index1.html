@@ -1,0 +1,134 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nalaiya Thiran</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+	<style>
+	.bg-dark {
+		background-color: #e62813!important;
+	}
+	#result {
+		color: #0a1c4ed1;
+	}
+@font-face {
+		font-family: 'Sucrose Bold Two';
+		src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2') format('woff2');
+		}
+@font-face {
+    font-family: 'IM Fell French Canon Pro';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/im-fell-french-canon-pro.woff2') format('woff2');
+}
+header { 
+	background: url(../static/images/image1.jpg) no-repeat right;
+    background-attachment: fixed;
+   
+	padding-top: 3%;
+    
+	background-size: 80%;
+  font-family: 'Sucrose Bold Two';
+}
+
+    
+
+header h1 { 
+	position: static;
+	top: 2rem;
+	right: 2rem;
+  font-size: 12vw;
+  line-height: .8;
+  margin-top: 0;
+  margin-bottom: 2%;
+  text-align: left;
+}
+
+main { 
+  background: rgb(232, 119, 219);
+  position: relative;
+  border: 1px solid #fff;
+  font-family: 'IM Fell French Canon Pro';
+  font-size: 1.4rem;
+  padding: 2rem 25%;
+  line-height: 1.6;
+}
+@media all and (max-width: 400px) {
+  main { padding: 2rem; }
+}
+	</style>
+</head>
+
+<body>
+            <header>
+                
+                	<h1>digital naturalist</h1>
+                	
+            </header>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">DIGITAL NATURALIST - AI enabled tool for bio-diversity research</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+		<div class="container">
+		  <div class="row">
+			<div class="col-sm-6 bd" >
+			  <h2 id="blink"><u>DIGITAL NATURALIST TEAM </u></h2>
+			  <br>
+			  <h3>Team leader:S.A.Syed Abrar<br><br></h3>
+                <h5>member1: C.Sivakumar<br><br>
+                member2: D.Siva<br><br>
+                member3: A.Vimosh aasi</h5>
+
+				<button onclick="document.location='index.html'">Login</button>
+				<button onclick="document.location='register.html'">Register</button>
+			</div>
+			
+			<div class="col-sm-6">
+				<div>
+					<h4>upload your images here</h4>
+			<form action = "http://localhost:5000/predict" id="upload-file" method="post" enctype="multipart/form-data">
+				<label for="imageUpload" class="upload-label">
+					UPLOAD...
+				</label>
+				<input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
+			</form>
+			
+
+			<div class="image-section" style="display:none;">
+				<div class="img-preview">
+					<div id="imagePreview">
+					</div>
+				</div>
+				<div>
+					<button type="button" class="btn btn-info btn-lg " id="btn-predict">click here  to see deatils</button>
+				</div>
+			</div>
+
+			<div class="loader" style="display:none;"></div>
+
+			<h3>
+				<span id="result"> </span>
+			</h3>
+
+		</div>
+			</div>
+			 
+		  </div>
+		</div>
+		</div>
+    </div>
+</body>
+
+<footer>
+    <script src="../static/js/main.js" type="text/javascript"></script>  
+      
+</footer>
+
+</html>
